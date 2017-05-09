@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title></title>
+		<meta charset="UTF-8">
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/main.js"></script>
+		<script src="js/opentip-jquery.min.js"></script><!-- Change to the adapter you actually use -->
+		<link href="css/opentip.css" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="configure">
+			<div>
+				<input type="radio" name="type" value="body"  checked> 本質
+				<input type="radio" name="type" value="look"> 見た目
+			</div>
+			<div>
+				実験時間
+				<input type="number" size="2" min="0" max="60" value="10" id="minutes">分
+				<input type="number" size="2" min="0" max="60" value="00" id="seconds">秒
+			</div>
+			<div class="inline">
+				<button id="Start">
+					評価開始
+				</button>
+				<button id="Init">
+					初期化
+				</button>
+			</div>
+			<br>
+			<div class="inline">
+				<input type="text" size="15px" maxlength="19" id="fileName">.csv
+				<a id="download" href="#" download="test.txt" >
+					ダウンロード
+				</a>
+			</div>
+		</div>
+		<div class="scroll">
+			<table>
+				<tr class="list">
+				</tr>
+			</table>
+		</div>
+		<p id="elapsedTime">
+			経過時間 0秒
+		</p>
+		<div >
+			<button class="angry-toggle">
+				　　　	
+			</button>
+		</div>
+	</body>
+</html>
