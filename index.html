@@ -16,9 +16,15 @@
 				<input type="radio" name="type" value="look"> 見た目
 			</div>
 			<div>
-				実験時間
-				<input type="number" size="2" min="0" max="60" value="10" id="minutes">分
-				<input type="number" size="2" min="0" max="60" value="00" id="seconds">秒
+				記入者(苗字) : <input type="text" size="8px" maxlength="4" id="author">
+			</div>
+			<br>
+			<div>
+				実験時間 : <span id="time"></span>
+			</div>
+			<div>
+					<input type="file" accept="video/*" id="video-file" >
+					<video controls id="player"></video>
 			</div>
 			<div class="inline">
 				<button id="Start">
@@ -28,10 +34,9 @@
 					初期化
 				</button>
 			</div>
-			<br>
 			<div class="inline">
-				<input type="text" size="15px" maxlength="19" id="fileName">.csv
-				<a id="download" href="#" download="test.txt" >
+				<p id="fileName" class="inline"></p>
+				<a id="download" href="#" download="test.txt" class="inline">
 					ダウンロード
 				</a>
 			</div>
@@ -42,13 +47,17 @@
 				</tr>
 			</table>
 		</div>
-		<p id="elapsedTime">
-			経過時間 0秒
-		</p>
-		<div >
+		<div>
+			<p id="elapsedTime" class="inline">
+				経過時間 0秒
+			</p>
+		</div>
+
+		<div class="cent">
 			<button class="angry-toggle">
 				　　　	
 			</button>
 		</div>
+
 	</body>
 </html>
